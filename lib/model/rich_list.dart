@@ -4,9 +4,9 @@ import '../model/rich_list_item.dart';
 import '../model/rich_list_item_card.dart';
 
 class RichList extends StatelessWidget {  
-  RichList(this.partners);
+  RichList(this.listItems);
 
-  final List<RichListItem> partners;
+  final List<RichListItem> listItems;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,9 @@ class RichList extends StatelessWidget {
 
   ListView _buildList(BuildContext context) {
     return ListView.builder(
-      itemCount: partners.length,
+      itemCount: listItems.length,
       itemBuilder: (BuildContext context, int index) {
-        return RichListItemCard(partners[index]);
+        return RichListItemCard(listItems[index]);
       },
     );
   }  

@@ -21,31 +21,7 @@ class _ItemListPageState extends State<ItemListPage> {
   }
 
   Widget _buildItemList() {
-    return ListView.builder(
-      itemBuilder: (BuildContext context, int index) {
-        return Column(
-          children: <Widget>[
-            Padding(
-              child: ListTile(
-                title: Text(
-                  _itemList[index].title,
-                  style: Theme.of(context).textTheme.title,
-                ),
-                subtitle: Text(
-                  _itemList[index].subtitle,
-                  style: Theme.of(context).textTheme.subtitle
-                ),
-              ),
-              padding: EdgeInsets.all(10.0),
-            ),
-            Divider(
-              height: 5.0,
-            )
-          ],
-        );
-      },
-      itemCount: _itemList.length,
-    );
+    // TODO: Implement Item List
   }
 
   @override

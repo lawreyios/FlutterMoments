@@ -41,23 +41,7 @@ class _FormPageState extends State<FormPage> {
   }
 
   void _showDialog(String title, String content) {
-    showDialog<AlertDialog>(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: Text(content),
-          actions: <Widget>[
-            FlatButton(
-              child: Text(ALERT_OK),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
+    // TODO: Implement Dialog
   }
 
   void _handleGenderChange(int value) =>
@@ -66,176 +50,34 @@ class _FormPageState extends State<FormPage> {
   void _handleTransportOption(bool value) =>
       setState(() => _formData['bus'] = value);
 
-  ListTile getNameInputListTile() {
-    return ListTile(
-      leading: Padding(
-        padding: EdgeInsets.only(left: 8.0, top: 16.0),
-        child: Text('Your Name:', style: Theme.of(context).textTheme.subtitle),
-      ),
-      title: Padding(
-        padding: EdgeInsets.only(top: 10.0),
-        child: Theme(
-          data: ThemeData(
-            primaryColor: kRegistrationBlack,
-            primaryColorDark: kRegistrationBlack,
-          ),
-          child: Container(
-            height: 40.0,
-            child: TextField(
-              style: Theme.of(context).textTheme.subtitle,
-              controller: _nameTextController,
-              textCapitalization: TextCapitalization.words,
-              decoration: InputDecoration(
-                fillColor: kRegistrationBlack,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                contentPadding: EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 10.0),
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    Icons.clear,
-                    color: kRegistrationBlack,
-                  ),
-                  onPressed: () {
-                    _nameTextController.clear();
-                  },
-                ),
-                hintText: NAME_HINT_TEXT,
-                labelText: NAME_LABEL_TEXT,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+  Widget getNameInputListTile() {
+    // TODO: Name Field
+    return Container();
   }
 
-  ListTile getGuestsCounter() {
-    return ListTile(
-      leading: Padding(
-        padding: EdgeInsets.only(left: 8.0, top: 8.0),
-        child: Text('No. of Guests (Including yourself):',
-            style: Theme.of(context).textTheme.subtitle),
-      ),
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-          IconButton(
-            color: kRegistrationBlack,
-            icon: Icon(Icons.remove),
-            onPressed: () {
-              if (_guestsCounter > 0) {
-                setState(() => _guestsCounter--);
-                _formData['guests'] = _guestsCounter;
-              }
-            },
-          ),
-          Text(
-            _guestsCounter.toString(),
-            style: Theme.of(context).textTheme.title,
-          ),
-          IconButton(
-            color: kRegistrationBlack,
-            icon: Icon(Icons.add),
-            onPressed: () {
-              if (_guestsCounter < 9) {
-                setState(() => _guestsCounter++);
-                _formData['guests'] = _guestsCounter;
-              }
-            },
-          ),
-        ],
-      ),
-    );
+  Widget getGuestsCounter() {
+    // TODO: Add Guest Counter
+    return Container();
   }
 
   Widget getSectionHeader(String title) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(top: 18, left: 22.0),
-          child: Text(
-            title,
-            style: Theme.of(context).textTheme.headline,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 18, right: 18),
-          child: Divider(
-            color: kYankeesBlue,
-          ),
-        )
-      ],
-    );
+    // TODO: Add Section Header
+    return Container();
   }
 
   Widget getGenderOptions() {
-    return ListTile(
-        leading: Padding(
-          padding: EdgeInsets.only(left: 8.0, top: 4.0),
-          child: Text('Gender:', style: Theme.of(context).textTheme.subtitle),
-        ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Radio(
-              activeColor: kRegistrationBlack,
-              value: 0,
-              groupValue: _formData['gender'] as int,
-              onChanged: _handleGenderChange,
-            ),
-            Text(
-              GENDER_CHOICES[0],
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-            Radio(
-              value: 1,
-              activeColor: kRegistrationBlack,
-              groupValue: _formData['gender'] as int,
-              onChanged: _handleGenderChange,
-            ),
-            Text(
-              GENDER_CHOICES[1],
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-          ],
-        ));
+    // TODO: Add Gender Options
+    return Container();
   }
 
   Widget getBusServiceOption() {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 12),
-      child: ListTile(
-        leading: Checkbox(
-          activeColor: kRegistrationBlack,
-          onChanged: _handleTransportOption,
-          value: _formData['bus'] as bool,
-        ),
-        title: InkWell(
-          onTap: () {
-            setState(() {
-              _formData['bus'] = !_formData['bus'];
-            });
-          },
-          child: Text(
-            'I need transport',
-            style: Theme.of(context).textTheme.subtitle,
-          ),
-        ),
-      ),
-    );
+    // TODO: Add Transport Options
+    return Container();
   }
 
   Widget getSubmitButton() {
-    return Padding(
-      child: Center(
-        child:
-            MomentsButton(text: SUBMIT, action: _submitForm).getButton(context),
-      ),
-      padding: EdgeInsets.only(bottom: 16),
-    );
+    // TODO: Add Submit Button
+    return Container();
   }
 
   List<Widget> renderForm() {

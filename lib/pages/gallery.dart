@@ -23,23 +23,7 @@ class GalleryPage extends StatefulWidget {
 final Widget placeholder = Container(color: Colors.grey);
 
 List _getChildren(MainModel model) {
-  final List<String> images = imgList;
-  return map<Widget>(
-    images,
-    (int index, String url) {
-      return Container(
-        decoration:
-            BoxDecoration(border: Border.all(width: 10.0, color: Colors.white)),
-        margin: EdgeInsets.all(5.0),
-        child: Image.asset(
-          url,
-          fit: BoxFit.cover,
-          width: 261.0,
-          height: 353.0,
-        ),
-      );
-    },
-  ).toList();
+  // TODO: Implement List
 }
 
 List<T> map<T>(List list, Function handler) {
@@ -64,37 +48,8 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
     return ScopedModelDescendant<MainModel>(
       builder: (BuildContext context, Widget child, MainModel model) {
         final List<String> images = imgList;
-        return Column(children: [
-          CarouselSlider(
-            items: _getChildren(model),
-            autoPlay: true,
-            height: 353,
-            enlargeCenterPage: true,
-            onPageChanged: (index) {
-              setState(() {
-                _current = index;
-              });
-            },
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: map<Widget>(
-              images,
-              (int index, String url) {
-                return Container(
-                    width: 8.0,
-                    height: 24.0,
-                    margin: EdgeInsets.symmetric(
-                        vertical: 2.0, horizontal: 2.0),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: _current == index
-                            ? kRegistrationBlack
-                            : Colors.white));
-              },
-            ),
-          ),
-        ]);
+        // TODO: Implement Carousel
+        return Column();
       },
     );
   }
@@ -113,10 +68,7 @@ class _GalleryPageState extends State<GalleryPage> {
     }
 
     Widget _buildMomentsButton(BuildContext context) {
-      return Center(
-        child: MomentsButton(text: 'MOMENTS', action: _goToHomePage)
-            .getButton(context),
-      );
+      // TODO: Implement Button
     }
 
     return Scaffold(
@@ -125,33 +77,8 @@ class _GalleryPageState extends State<GalleryPage> {
         child: AppBar(backgroundColor: kPlatinum, elevation: 0.0),
       ),
       backgroundColor: kPlatinum,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(top: 8.0, bottom: 24.0),
-            child: Text('Moments', style: Theme.of(context).textTheme.caption),
-          ),
-          Expanded(
-            child: SizedBox(
-              height: 200.0,
-              child: ListView(children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
-                  child: Column(
-                    children: [
-                      CarouselWithIndicator(),
-                    ],
-                  ),
-                ),
-              ]),
-            ),
-          ),
-          Padding(
-              padding: EdgeInsets.only(bottom: 24.0),
-              child: _buildMomentsButton(context))
-        ],
-      ),
+      // TODO: Implement Gallery
+      body: Column(),
     );
   }
 }
