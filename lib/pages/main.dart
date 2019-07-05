@@ -1,7 +1,7 @@
-import 'package:flutter_moments/utils/colors.dart';
-import 'package:flutter_moments/model/menu_item.dart';
-import 'package:flutter_moments/pages/form.dart';
-import 'package:flutter_moments/scoped-models/main.dart';
+import 'package:Moments/utils/colors.dart';
+import 'package:Moments/model/menu_item.dart';
+import 'package:Moments/pages/form.dart';
+import 'package:Moments/scoped-models/main.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'item_list.dart';
@@ -67,7 +67,7 @@ class _MainPageState extends State<MainPage> {
                     color: kRegistrationBlack,
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 4),
+                    margin: EdgeInsets.only(top: 4),
                     child: Text(
                       menuTitles[i],
                       style: Theme.of(context).textTheme.display1

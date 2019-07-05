@@ -13,23 +13,22 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_moments/utils/constants.dart';
-import 'package:flutter_moments/scoped-models/main.dart';
+import 'package:Moments/utils/constants.dart';
+import 'package:Moments/scoped-models/main.dart';
 import '../utils/colors.dart';
 import '../utils/buttons.dart';
 
 class LoginPage extends StatefulWidget {
   final MainModel _model;
 
-  const LoginPage(this._model);
+  LoginPage(this._model);
 
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class AccentColorOverride extends StatelessWidget {
-  const AccentColorOverride({Key key, this.color, this.child})
-      : super(key: key);
+  AccentColorOverride({Key key, this.color, this.child}) : super(key: key);
 
   final Color color;
   final Widget child;
@@ -73,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
             borderRadius: BorderRadius.circular(5.0),
           ),
           contentPadding:
-              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
           labelText: LOGIN_LABEL_TEXT,
           suffixIcon: IconButton(
             icon: Icon(
@@ -100,9 +99,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildEnterButton(BuildContext context) {
     return Center(
-        child: MomentsButton(
-                text: ENTER, action: loginUser)
-            .getButton(context));
+        child:
+            MomentsButton(text: ENTER, action: loginUser).getButton(context));
   }
 
   void loginUser() {
@@ -123,11 +121,11 @@ class _LoginPageState extends State<LoginPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: const Text('Invalid Code!'),
-            content: const Text('Please re-enter code again.'),
+            title: Text('Invalid Code!'),
+            content: Text('Please re-enter code again.'),
             actions: <Widget>[
               FlatButton(
-                child: const Text('Okay'),
+                child: Text('Okay'),
                 onPressed: () {
                   Navigator.of(context).pop();
                   _mobileNumberController.clear();

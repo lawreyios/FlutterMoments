@@ -5,7 +5,7 @@ import 'rich_list_item.dart';
 class RichListItemCard extends StatefulWidget {
   final RichListItem item;
 
-  const RichListItemCard(this.item);
+  RichListItemCard(this.item);
 
   @override
   _RichListItemCardState createState() => _RichListItemCardState(item);
@@ -33,7 +33,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
     );
   }
 
-  Widget get list_item_card {
+  Widget get listItemCard {
     return Padding(
       padding: EdgeInsets.only(top: 18, bottom: 16),
       child: Container(
@@ -47,7 +47,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
           ),
           color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               top: 10.0,
               bottom: 8.0,
               left: 95.0,
@@ -74,14 +74,14 @@ class _RichListItemCardState extends State<RichListItemCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: Container(
         height: 150.0,
         child: Stack(
           children: <Widget>[
             Positioned(
               left: 45.0,
-              child: list_item_card,
+              child: listItemCard,
             ),
             Positioned(top: 20.5, child: itemImage),
           ],

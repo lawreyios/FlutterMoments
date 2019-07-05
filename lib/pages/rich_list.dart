@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_moments/model/rich_list_item.dart';
-import 'package:flutter_moments/model/rich_list.dart';
+import 'package:Moments/model/rich_list_item.dart';
+import 'package:Moments/model/rich_list.dart';
 
 class RichListPage extends StatelessWidget {
   final List<RichListItem> _list = [

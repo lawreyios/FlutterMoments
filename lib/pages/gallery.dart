@@ -3,7 +3,7 @@ import '../utils/buttons.dart';
 import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter_moments/scoped-models/main.dart';
+import 'package:Moments/scoped-models/main.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -30,7 +30,7 @@ List _getChildren(MainModel model) {
       return Container(
         decoration:
             BoxDecoration(border: Border.all(width: 10.0, color: Colors.white)),
-        margin: const EdgeInsets.all(5.0),
+        margin: EdgeInsets.all(5.0),
         child: Image.asset(
           url,
           fit: BoxFit.cover,
@@ -84,7 +84,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
                 return Container(
                     width: 8.0,
                     height: 24.0,
-                    margin: const EdgeInsets.symmetric(
+                    margin: EdgeInsets.symmetric(
                         vertical: 2.0, horizontal: 2.0),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -137,7 +137,7 @@ class _GalleryPageState extends State<GalleryPage> {
               height: 200.0,
               child: ListView(children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  padding: EdgeInsets.symmetric(vertical: 15.0),
                   child: Column(
                     children: [
                       CarouselWithIndicator(),

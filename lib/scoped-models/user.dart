@@ -1,5 +1,5 @@
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter_moments/model/user.dart';
+import 'package:Moments/model/user.dart';
 
 mixin UserModel on Model {
   User _currentUser;

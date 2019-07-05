@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_moments/model/list_item.dart';
-import 'package:flutter_moments/scoped-models/main.dart';
+import 'package:Moments/model/list_item.dart';
+import 'package:Moments/scoped-models/main.dart';
 
 class ItemListPage extends StatefulWidget {
   final MainModel model;

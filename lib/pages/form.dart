@@ -1,8 +1,8 @@
 import '../utils/colors.dart';
 import '../utils/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_moments/utils/constants.dart';
-import 'package:flutter_moments/scoped-models/main.dart';
+import 'package:Moments/utils/constants.dart';
+import 'package:Moments/scoped-models/main.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class FormPage extends StatefulWidget {
@@ -90,7 +90,7 @@ class _FormPageState extends State<FormPage> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                contentPadding: const EdgeInsets.symmetric(
+                contentPadding: EdgeInsets.symmetric(
                     vertical: 10.0, horizontal: 10.0),
                 suffixIcon: IconButton(
                   icon: Icon(
@@ -123,7 +123,7 @@ class _FormPageState extends State<FormPage> {
         children: <Widget>[
           IconButton(
             color: kRegistrationBlack,
-            icon: const Icon(Icons.remove),
+            icon: Icon(Icons.remove),
             onPressed: () {
               if (_guestsCounter > 0) {
                 setState(() => _guestsCounter--);
@@ -137,7 +137,7 @@ class _FormPageState extends State<FormPage> {
           ),
           IconButton(
             color: kRegistrationBlack,
-            icon: const Icon(Icons.add),
+            icon: Icon(Icons.add),
             onPressed: () {
               if (_guestsCounter < 9) {
                 setState(() => _guestsCounter++);
@@ -277,11 +277,11 @@ class _FormPageState extends State<FormPage> {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: const Text('Your Submission is Successful!'),
-                content: const Text('Thank you for your participation!'),
+                title: Text('Your Submission is Successful!'),
+                content: Text('Thank you for your participation!'),
                 actions: <Widget>[
                   FlatButton(
-                    child: const Text(ALERT_OK),
+                    child: Text(ALERT_OK),
                     onPressed: () {
                       Navigator.of(context).pop();
                       _restFields();

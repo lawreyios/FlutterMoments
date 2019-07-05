@@ -1,4 +1,4 @@
-name: flutter_moments
+name: Moments
 description: A new Flutter project.
 
 version: 1.0.0+1
@@ -37,8 +37,6 @@ flutter:
     fonts:
     - asset: fonts/Cookie-Regular.ttf       
   assets:
-    - assets/home_bg.png
-    - assets/main_bg.png
     - assets/LOGO.png
     - assets/pic1.jpg
     - assets/pic2.jpg
@@ -48,4 +46,3 @@ flutter:
     - assets/menu_form.png
     - assets/menu_list.png
     - assets/menu_richList.png
-    - assets/logout.png    

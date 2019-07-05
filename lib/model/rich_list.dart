@@ -4,7 +4,7 @@ import '../model/rich_list_item.dart';
 import '../model/rich_list_item_card.dart';
 
 class RichList extends StatelessWidget {  
-  const RichList(this.partners);
+  RichList(this.partners);
 
   final List<RichListItem> partners;
 
