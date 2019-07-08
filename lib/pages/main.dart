@@ -20,11 +20,11 @@ class _MainPageState extends State<MainPage> {
   MenuItem selectedMenuItem = MenuItem.form;
 
   List<Widget> buildMenuItems(MainModel model) {
-    // TODO: Implement Login Text Field
+    // TODO #8: Implement Building of Menu Items
   }
 
   Widget getPage(MainModel model) {
-    // TODO: Implement Menu Items Population
+    // TODO #9: Implement Menu Items Population
   }
 
   @override
@@ -35,10 +35,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: kMomentsWhite,
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'Menu',
-          style: Theme.of(context).textTheme.headline
-        ),
+        title: Text('Menu', style: Theme.of(context).textTheme.headline),
         backgroundColor: Colors.white,
         elevation: 0.0,
         actions: <Widget>[
@@ -51,7 +48,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
       ),
-      // TODO: Implement Child View
+      // TODO #10: Implement Child View
       body: Column(),
     );
   }

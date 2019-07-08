@@ -22,8 +22,10 @@ class GalleryPage extends StatefulWidget {
 
 final Widget placeholder = Container(color: Colors.grey);
 
-List _getChildren(MainModel model) {
-  // TODO: Implement List
+List _getChildren() {
+  // TODO #4: Implement List
+  final List<String> images = imgList;
+  return [];
 }
 
 List<T> map<T>(List list, Function handler) {
@@ -45,13 +47,9 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
 
   @override
   Widget build(BuildContext context) {
-    return ScopedModelDescendant<MainModel>(
-      builder: (BuildContext context, Widget child, MainModel model) {
-        final List<String> images = imgList;
-        // TODO: Implement Carousel
-        return Column();
-      },
-    );
+    final List<String> images = imgList;
+    // TODO #5: Implement Carousel
+    return Column();
   }
 }
 
@@ -68,7 +66,8 @@ class _GalleryPageState extends State<GalleryPage> {
     }
 
     Widget _buildMomentsButton(BuildContext context) {
-      // TODO: Implement Button
+      // TODO #6: Implement Button
+      return Center();
     }
 
     return Scaffold(
@@ -77,7 +76,7 @@ class _GalleryPageState extends State<GalleryPage> {
         child: AppBar(backgroundColor: kPlatinum, elevation: 0.0),
       ),
       backgroundColor: kPlatinum,
-      // TODO: Implement Gallery
+      // TODO #7: Implement Gallery
       body: Column(),
     );
   }

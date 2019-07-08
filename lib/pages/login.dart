@@ -51,12 +51,13 @@ class _LoginPageState extends State<LoginPage> {
   String _mobileNumber;
 
   Widget _buildLoginTextField() {
-    // TODO: Implement Login Text Field
+    // TODO #1: Implement Login Text Field
     return Container();
   }
 
   Widget _buildEnterButton(BuildContext context) {
-    // TODO: Implement Enter Button
+    // TODO #2: Implement Enter Button
+    return Center();
   }
 
   void loginUser() {
@@ -99,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF9F9F9),
-      // TODO: Implement Login View
+      // TODO #3: Implement Login View
       body: Container(),
     );
   }

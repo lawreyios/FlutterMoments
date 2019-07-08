@@ -21,12 +21,12 @@ class _ItemListPageState extends State<ItemListPage> {
   }
 
   Widget _buildItemList() {
-    // TODO: Implement Item List
+    // TODO #18: Implement Item List
+    return Container();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: _buildItemList());
+    return Scaffold(body: _buildItemList());
   }
 }

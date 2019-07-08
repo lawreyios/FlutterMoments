@@ -19,12 +19,12 @@ class _RichListItemCardState extends State<RichListItemCard> {
   String renderUrl;
 
   Widget get itemImage {
-    // TODO: Implement List Item Image View
+    // TODO #19: Implement List Item Image View
     return Container();
   }
 
   Widget get listItemCard {
-    // TODO: Implement List Item Card View
+    // TODO #20: Implement List Item Card View
     return Container();
   }
 
@@ -32,7 +32,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      // TODO: Implement List Item Image Card View
+      // TODO #21: Implement List Item Image Card View
       child: Container(),
     );
   }
