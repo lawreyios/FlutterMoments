@@ -19,6 +19,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
   String renderUrl;
 
   Widget get itemImage {
+    // TODO #19: Implement List Item Image View
     return Container(
       width: 125.0,
       height: 125.0,
@@ -34,6 +35,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
   }
 
   Widget get listItemCard {
+    // TODO #20: Implement List Item Card View
     return Padding(
       padding: EdgeInsets.only(top: 18, bottom: 16),
       child: Container(
@@ -61,7 +63,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
                   Text(widget.item.name,
                       style: Theme.of(context).textTheme.title),
                   Text(widget.item.description,
-                      style: Theme.of(context).textTheme.subtitle),                 
+                      style: Theme.of(context).textTheme.subtitle),
                 ],
               ),
             ),
@@ -75,6 +77,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      // TODO #21: Implement List Item Image Card View
       child: Container(
         height: 150.0,
         child: Stack(

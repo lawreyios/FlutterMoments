@@ -51,6 +51,7 @@ class _LoginPageState extends State<LoginPage> {
   String _mobileNumber;
 
   Widget _buildLoginTextField() {
+    // TODO #1: Implement Login Text Field
     return Theme(
       data: ThemeData(
         primaryColor: kRegistrationBlack,
@@ -98,6 +99,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildEnterButton(BuildContext context) {
+    // TODO #2: Implement Enter Button
     return Center(
         child:
             MomentsButton(text: ENTER, action: loginUser).getButton(context));
@@ -143,6 +145,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF9F9F9),
+      // TODO #3: Implement Login View
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 24.0),

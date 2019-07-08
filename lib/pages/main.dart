@@ -20,17 +20,14 @@ class _MainPageState extends State<MainPage> {
   MenuItem selectedMenuItem = MenuItem.form;
 
   List<Widget> buildMenuItems(MainModel model) {
+    // TODO #8: Implement Building of Menu Items
     final List<String> images = [
       'assets/menu_form.png',
       'assets/menu_list.png',
       'assets/menu_richList.png'
     ];
 
-    final List<String> menuTitles = [
-      'Form',
-      'List',
-      'RichList'
-    ];
+    final List<String> menuTitles = ['Form', 'List', 'RichList'];
 
     final List<MenuItem> menuItems = [
       MenuItem.form,
@@ -47,7 +44,8 @@ class _MainPageState extends State<MainPage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(4.0)),
               border: Border.all(
-                  color: isSelectedMenuItem ? kRegistrationBlack : Colors.white)),
+                  color:
+                      isSelectedMenuItem ? kRegistrationBlack : Colors.white)),
           child: InkWell(
             onTap: () {
               setState(() {
@@ -68,10 +66,8 @@ class _MainPageState extends State<MainPage> {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 4),
-                    child: Text(
-                      menuTitles[i],
-                      style: Theme.of(context).textTheme.display1
-                    ),
+                    child: Text(menuTitles[i],
+                        style: Theme.of(context).textTheme.display1),
                   )
                 ],
               ),
@@ -85,6 +81,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   Widget getPage(MainModel model) {
+    // TODO #9: Implement Menu Items Population
     switch (selectedMenuItem) {
       case MenuItem.form:
         return FormPage();
@@ -104,10 +101,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: kMomentsWhite,
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'Menu',
-          style: Theme.of(context).textTheme.headline
-        ),
+        title: Text('Menu', style: Theme.of(context).textTheme.headline),
         backgroundColor: Colors.white,
         elevation: 0.0,
         actions: <Widget>[
@@ -120,6 +114,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
       ),
+      // TODO #10: Implement Child View
       body: Column(
         children: <Widget>[
           Padding(
@@ -133,10 +128,8 @@ class _MainPageState extends State<MainPage> {
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 8),
-            child: Text(
-              "Hello ${_model.user.name}!",
-              style: Theme.of(context).textTheme.headline
-            ),
+            child: Text("Hello ${_model.user.name}!",
+                style: Theme.of(context).textTheme.headline),
           ),
           Expanded(child: getPage(_model))
         ],

@@ -21,6 +21,7 @@ class _ItemListPageState extends State<ItemListPage> {
   }
 
   Widget _buildItemList() {
+    // TODO #18: Implement Item List
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         return Column(
@@ -31,10 +32,8 @@ class _ItemListPageState extends State<ItemListPage> {
                   _itemList[index].title,
                   style: Theme.of(context).textTheme.title,
                 ),
-                subtitle: Text(
-                  _itemList[index].subtitle,
-                  style: Theme.of(context).textTheme.subtitle
-                ),
+                subtitle: Text(_itemList[index].subtitle,
+                    style: Theme.of(context).textTheme.subtitle),
               ),
               padding: EdgeInsets.all(10.0),
             ),
@@ -50,7 +49,6 @@ class _ItemListPageState extends State<ItemListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: _buildItemList());
+    return Scaffold(body: _buildItemList());
   }
 }

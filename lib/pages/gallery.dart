@@ -22,7 +22,8 @@ class GalleryPage extends StatefulWidget {
 
 final Widget placeholder = Container(color: Colors.grey);
 
-List _getChildren(MainModel model) {
+List _getChildren() {
+  // TODO #4: Implement List
   final List<String> images = imgList;
   return map<Widget>(
     images,
@@ -61,42 +62,37 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
 
   @override
   Widget build(BuildContext context) {
-    return ScopedModelDescendant<MainModel>(
-      builder: (BuildContext context, Widget child, MainModel model) {
-        final List<String> images = imgList;
-        return Column(children: [
-          CarouselSlider(
-            items: _getChildren(model),
-            autoPlay: true,
-            height: 353,
-            enlargeCenterPage: true,
-            onPageChanged: (index) {
-              setState(() {
-                _current = index;
-              });
-            },
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: map<Widget>(
-              images,
-              (int index, String url) {
-                return Container(
-                    width: 8.0,
-                    height: 24.0,
-                    margin: EdgeInsets.symmetric(
-                        vertical: 2.0, horizontal: 2.0),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: _current == index
-                            ? kRegistrationBlack
-                            : Colors.white));
-              },
-            ),
-          ),
-        ]);
-      },
-    );
+    final List<String> images = imgList;
+    // TODO #5: Implement Carousel
+    return Column(children: [
+      CarouselSlider(
+        items: _getChildren(),
+        autoPlay: true,
+        height: 353,
+        enlargeCenterPage: true,
+        onPageChanged: (index) {
+          setState(() {
+            _current = index;
+          });
+        },
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: map<Widget>(
+          images,
+          (int index, String url) {
+            return Container(
+                width: 8.0,
+                height: 24.0,
+                margin: EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color:
+                        _current == index ? kRegistrationBlack : Colors.white));
+          },
+        ),
+      ),
+    ]);
   }
 }
 
@@ -113,6 +109,7 @@ class _GalleryPageState extends State<GalleryPage> {
     }
 
     Widget _buildMomentsButton(BuildContext context) {
+      // TODO #6: Implement Button
       return Center(
         child: MomentsButton(text: 'MOMENTS', action: _goToHomePage)
             .getButton(context),
@@ -125,6 +122,7 @@ class _GalleryPageState extends State<GalleryPage> {
         child: AppBar(backgroundColor: kPlatinum, elevation: 0.0),
       ),
       backgroundColor: kPlatinum,
+      // TODO #7: Implement Gallery
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[

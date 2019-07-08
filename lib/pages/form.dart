@@ -41,6 +41,7 @@ class _FormPageState extends State<FormPage> {
   }
 
   void _showDialog(String title, String content) {
+    // TODO #11: Implement Dialog
     showDialog<AlertDialog>(
       context: context,
       builder: (BuildContext context) {
@@ -67,6 +68,7 @@ class _FormPageState extends State<FormPage> {
       setState(() => _formData['bus'] = value);
 
   ListTile getNameInputListTile() {
+    // TODO #12: Implement Name Section
     return ListTile(
       leading: Padding(
         padding: EdgeInsets.only(left: 8.0, top: 16.0),
@@ -90,8 +92,8 @@ class _FormPageState extends State<FormPage> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                contentPadding: EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 10.0),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 suffixIcon: IconButton(
                   icon: Icon(
                     Icons.clear,
@@ -111,7 +113,8 @@ class _FormPageState extends State<FormPage> {
     );
   }
 
-  ListTile getGuestsCounter() {
+  Widget getGuestsCounter() {
+    // TODO #13: Add Guest Counter
     return ListTile(
       leading: Padding(
         padding: EdgeInsets.only(left: 8.0, top: 8.0),
@@ -151,6 +154,7 @@ class _FormPageState extends State<FormPage> {
   }
 
   Widget getSectionHeader(String title) {
+    // TODO #14: Add Section Header
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -172,39 +176,42 @@ class _FormPageState extends State<FormPage> {
   }
 
   Widget getGenderOptions() {
+    // TODO #15: Add Gender Options
     return ListTile(
-        leading: Padding(
-          padding: EdgeInsets.only(left: 8.0, top: 4.0),
-          child: Text('Gender:', style: Theme.of(context).textTheme.subtitle),
-        ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Radio(
-              activeColor: kRegistrationBlack,
-              value: 0,
-              groupValue: _formData['gender'] as int,
-              onChanged: _handleGenderChange,
-            ),
-            Text(
-              GENDER_CHOICES[0],
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-            Radio(
-              value: 1,
-              activeColor: kRegistrationBlack,
-              groupValue: _formData['gender'] as int,
-              onChanged: _handleGenderChange,
-            ),
-            Text(
-              GENDER_CHOICES[1],
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-          ],
-        ));
+      leading: Padding(
+        padding: EdgeInsets.only(left: 8.0, top: 4.0),
+        child: Text('Gender:', style: Theme.of(context).textTheme.subtitle),
+      ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Radio(
+            activeColor: kRegistrationBlack,
+            value: 0,
+            groupValue: _formData['gender'] as int,
+            onChanged: _handleGenderChange,
+          ),
+          Text(
+            GENDER_CHOICES[0],
+            style: Theme.of(context).textTheme.subtitle,
+          ),
+          Radio(
+            value: 1,
+            activeColor: kRegistrationBlack,
+            groupValue: _formData['gender'] as int,
+            onChanged: _handleGenderChange,
+          ),
+          Text(
+            GENDER_CHOICES[1],
+            style: Theme.of(context).textTheme.subtitle,
+          ),
+        ],
+      ),
+    );
   }
 
   Widget getBusServiceOption() {
+    // TODO #16: Add Transport Options
     return Padding(
       padding: EdgeInsets.only(bottom: 12),
       child: ListTile(
@@ -229,6 +236,7 @@ class _FormPageState extends State<FormPage> {
   }
 
   Widget getSubmitButton() {
+    // TODO #17: Add Submit Button
     return Padding(
       child: Center(
         child:
